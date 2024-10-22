@@ -23,6 +23,7 @@ const TodoList = () => {
             // Listen for incoming messages
             newConnection.on("ReceiveBroadcast", (message: string) => {
               console.log('Got message',message);
+              fetchTodos();
             });
           }
         };
